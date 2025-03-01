@@ -1,0 +1,245 @@
+.main {
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 15vh;
+    position: relative;
+    background: url('path/to/wood-texture.jpg'); 
+    color: #333333; 
+    font-family: 'Arial', sans-serif; 
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+.main .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 20px;
+    color: #f5f5f5; 
+    border-bottom: 1px solid #d4af37; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.main .nav img {
+    width: 50px;
+    border-radius: 30%;
+    filter: none; /* Remove drop shadow for a classic look */
+}
+
+.main-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.main .greet {
+    margin: 30px 0px;
+    font-size: 52px;
+    font-weight: 400;
+    padding: 20px;
+    color: #d4af37; /* Gold text color for classic theme */
+    background: none; /* Remove gradient */
+}
+
+.main .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+    padding: 0px;
+}
+
+.main .card {
+    height: 50px;
+    padding: 10px;
+    background: #f5f5f5;
+    border: 1px solid #d4af37; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main .card img {
+    width: 0px;
+    padding: 0px;
+    position: absolute;
+    background-color: transparent; 
+}
+
+.main .card p {
+    color: #333333; 
+    font-size: 14px;
+}
+
+.main .card:hover {
+    background-color: #e0e0e0; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+}
+
+.main-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    max-width: 800px;
+    padding: 0px 20px;
+    margin: auto;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5f5f5; 
+    padding: 10px 20px;
+    border-radius: 5px; 
+    border: 1px solid #d4af37; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+    color: #333333; 
+}
+
+.search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 18px;
+    color: #333333; 
+}
+
+.search-box button {
+    background: transparent;
+    border: none;
+    color: #d4af37;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.main .bottom-info {
+    font-size: 13px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 300;
+    color: #666666; 
+}
+
+.result {
+    padding: 0px 5%;
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
+.result div {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #d4af37;
+    border-radius: 5px;
+    background: #f4f4f4;
+}
+
+
+.result-button {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.result-button button {
+    background-color: #d4af37; /* Gold color for classic theme */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.result-button button:hover {
+    background-color: #b5942b; /* Darker gold on hover */
+}
+
+
+.result::-webkit-scrollbar {
+    display: none;
+}
+
+.result-title {
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.result img {
+    width: 50px;
+    border-radius: 50%;
+    filter: none; 
+}
+
+.result-data {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+
+.result-data p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 0;
+    color: #333333; 
+    white-space: pre-wrap; /* Preserve whitespace and line breaks */
+}
+
+.loader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.loader hr {
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(to right, #f8b251, #a37200, #4b4c49
+    );
+    background-size: 800% 100%;
+    animation: gradientAnimation 2s ease infinite;
+    height: 30px;
+    opacity: 0.1;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.result-data p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #333333; 
+}
+
+@media (max-width: 600px) {
+    .main-bottom input {
+        flex: none;
+        width: 150px;
+    }
+
+    .main-bottom button {
+        width: 20px;
+    }
+
+    .search-box {
+        padding: 5px 10px;
+        gap: 5px;
+    }
+}
